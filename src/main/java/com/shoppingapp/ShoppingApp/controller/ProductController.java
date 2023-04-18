@@ -26,6 +26,11 @@ public class ProductController {
 	@Autowired
 	ProductRepository productRepo;
 	
+	@GetMapping("/testDemo")
+	public String test(){
+	return "test hogaya";
+	}
+	
 	//search
 	@GetMapping("/searchn")
 	public List<ProductResponseDto> searchByName(@RequestParam("name") String name) {
